@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+  .layout{
+  width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 2px 2px 2px #ccc;
+}
+.layout h3{
+  background: #009688;
+  color: #fff;
+  font-size: 35px;
+  padding: 10px 15px;
+}
+.form>div{
+  margin: 10px;
+}
+.form label{
+  color: #757575;
+}
+.form form{
+  padding: 16px;
+}
+.form .text{
+  display: block;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.form input[type="submit"]
+{
+  padding: 8px 16px;
+  color: #fff;
+  background-color: #009688;
+  border: 0;
+}
+.form textarea{
+  border: none;
+  border-bottom: 1px solid black;
+}
+.clearfix:after{
+  content:'';
+  display: block;
+  clear: both;
+        }
+.form .half{
+  width: 40%;
+  float: left;
+  line-height: 1.4;
+}
+.form>.radio{
+  width: 40%;
+  float: left;
+}
+.form
+input[type="text"],.form textarea{
+  display: block;
+  border: none;/*必须加*/
+  border-bottom: 1px solid #808080;
+  width: 100%;/*增加宽度*/
+  padding:10px 0px;/*文本框有内边距*/
+}
+input[type="text"]:focus,
+.form textarea:focus{
+  outline: none;/*输入后无边框*/
+}
+  </style>
+</head>
+<body>
+<div class="layout">
+  <div class="form">
+        <h3>信息收集表</h3>
+        <form  action method="post" class="form">
+        <div>
+        <label for="name">姓名</label>
+        <input type="text" id="name" name="name">
+        </div>
+        <div>
+        <label for="qq">QQ</label>
+        <input id="qq" type="text" name="qq">
+         </div>
+        <div >
+        <label for="textarea">要说的话</label>
+        <textarea id="textarea" name="comment" ></textarea>
+        </div>
+        <div class="clearfix">
+        <div class="half">
+        <input id="milk" type="checkbox" name="drink" checked="checked">
+          <label for="milk" >Milk</label>
+        <br>
+        <input id="sugar" type="checkbox"  name="drink">
+          <label for="sugar">Sugar</label>
+        <br>
+        <input id="lemon" type="checkbox" name="drink">
+          <label for="lemon">Lemon</label>
+        </div>
+        <div class="half">
+        <input  id="male" type="radio" name="sex" value="male" checked="checked">
+          <label for="male">Male</label>
+          <br>
+        <input id="female" type="radio" name="sex">
+          <label for="female">Female</label>
+        </div>
+          </div>
+        <div>
+        <input type="submit" value="提交">
+        </div>
+</form>
+</div>
+</div>
+</body>
+</html>
+</body>
+</html>
