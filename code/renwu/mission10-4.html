@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+  
+.layout>ul{
+  list-style: none;
+}
+.layout li{
+  position: relative;
+}
+.layout>ul>li a{
+  display:inline-block;
+  text-decoration: none;
+  color:black;
+}
+.layout>ul>li{
+  float:left
+}
+.layout a{
+  float:left;
+  text-align: center;
+  padding: 10px;
+  background: #808080;
+}
+.layout a:hover{
+  background: #ccc;
+}
+.layout li:last-child:hover>div{
+  display:block;
+}
+.layout .children a{
+ width:100px;
+ clear: both;
+ float:right;
+}
+.children{
+  position: absolute;
+  left:0px;
+  top:100%;
+  display:none;
+}
+.children a:hover{
+  display: block;
+}
+</style>
+</head>
+<body>
+<div class="layout">
+    <ul class="bar">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">作品</a></li>
+        <li>
+            <a href="#">更多</a>
+          <div class="children">
+                <a href="#">Github</a>
+                <a href="#">博客</a>
+                <a href="#">知乎</a>
+          </div>
+      </li>
+  
+    </ul>
+</div>
+</html>
