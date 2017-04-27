@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>通栏布局</title>
+  <style>
+  .layout{
+  margin: 0px auto;
+  width: 500px;
+}
+#header{/*header本身没有宽度，形成通栏效果，但是宽度是屏幕的一半，如果内容大于屏幕
+  宽度，会导致通栏后半部分缺一部分，所有需要定义最小宽度*
+  而定义为最大宽度时，缩小屏幕宽度内容会缩小，不会发生上述现象*/
+  min-width:500px;
+  color:#fff;
+  background: red;
+  height:50px;
+}
+#foot{
+  color:#fff;
+  background: green;
+  height:50px;/*没有加最小宽度导致屏幕变小时比内容宽度短*/
+}
+#main{/*id本身就是唯一，不需要直接子元素选择器来筛选*/
+  color:#fff;
+  background: blue;
+  height:400px;
+}
+</style>
+</head>
+<body>
+    <div id="header">
+    <div class="layout">头部</div>
+  </div>
+    <div id="main" class="layout">内容</div>
+    <div id="foot">
+    <div class="layout">尾部</div>
+      </div>
+  
+    
+</body>
+</html>
