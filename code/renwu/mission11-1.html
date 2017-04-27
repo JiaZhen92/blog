@@ -9,7 +9,7 @@
   margin:0px auto;
   border:1px solid orange;
   padding-left:110px;
-  padding-right:160px;/*不增加padding无法显示内容*/
+  padding-right:160px;/*不增加padding无法显示内容，目的是预留空间*/
 }
 .ct:after{
   content: "";
@@ -28,7 +28,7 @@
   background: red;
   float:left;
   margin-left:-100%;
-  position: relative;
+  position: relative;/*利用相对位置移动*/
   left:-110px;
 }
 .extra{
