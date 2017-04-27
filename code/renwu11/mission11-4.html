@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>三栏布局</title>
+  <style>
+  .ct{
+   /*border: 1px solid black;*/
+   /*main的宽度为父容器宽度，aside也是这个父容器的元素，长度肯定小于父容器的宽度
+  所以，不会出现圣杯模型的问题*/
+}
+.ct:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.main, .aside, .extra{
+  float: left;
+}
+.main{
+  width:100%;
+}
+.main>.content{
+   background: red;
+   height:400px;
+   margin-left: 100px;/*侧边宽度*/
+   margin-right: 100px;
+}
+.aside{
+  width: 100px;
+  height: 300px;
+  background: pink;
+  margin-left: -100%;
+}
+.extra{
+  width: 100px;
+  height: 300px;
+  background: yellow;
+  margin-left:-100px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="ct">
+    <div class="main">
+  <div class="content">menu</div>
+    </div><!--内容放在子box里，子box设置左右margin即可，背景色用子box的背景色-->
+  <div class="aside">aside</div>
+  <div class="extra">extra</div>
+  </div>
+
+</body>
+</html>
