@@ -27,7 +27,8 @@
   height:300px;
   background: red;
   float:left;
-  margin-left:-100%;
+  margin-left:-100%;/*要想aside的左边界移动到main的左边界，需要main本身也就是main父容器的大小大于aside的宽度，这将导致页面宽度过小时，
+  aside无法正常显示*/
   position: relative;/*利用相对位置移动*/
   left:-110px;
 }
