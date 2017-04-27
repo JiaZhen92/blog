@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>单列布局</title>
+  <style>
+  .layout{
+  margin: 0px auto;
+  /*width: 500px;*/
+  max-width: 500px;
+/*最大宽度为500，小于500就是屏幕内容宽度*/
+}
+#header{
+  color:#fff;
+  background: red;
+  height:50px;
+}
+#foot{
+  color:#fff;
+  background: green;
+  height:50px;
+}
+#main{/*id本身就是唯一，不需要直接子元素选择器来筛选*/
+  color:#fff;
+  background: blue;
+  height:400px;
+}
+</style>
+</head>
+<body>
+
+    <div id="header" class="layout">头部</div>
+    <div id="main" class="layout">内容</div>
+    <div id="foot" class="layout">尾部</div>
+  
+    
+</body>
+</html>
