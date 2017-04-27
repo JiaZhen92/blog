@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>三栏布局</title>
+  <style>
+  .aside-left{
+  height: 400px;
+  width: 200px;
+  background: pink;
+  float: left;
+}
+.aside-right{
+  height: 400px;
+  width: 100px;
+  background: red;
+  float: right;
+}
+.content{
+  margin-left: 210px;
+  margin-right: 110px;
+  height: 500px;
+  background: blue;
+}
+  </style>
+</head>
+<body>
+  <div class="aside-left">left</div>
+  <div class="aside-right">right</div>
+  <div class="content">menu</div>
+  <!--menu要放最后面，放前面由于是块级元素，会影响浮动box的布局，因为浏览器是从上到下渲染的-->
+
+</body>
+</html>
