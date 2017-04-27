@@ -4,67 +4,78 @@
   <meta charset="utf-8">
   <title>JS Bin</title>
   <style>
-.layout{
-  width: 600px;
-  margin: 0px auto;
-  background:#ccc;
-}
-.layout>ul{
+    ul{
   list-style: none;
 }
-.layout li{
-  position: relative;
-}
-.layout>ul>li a{
-  display:inline-block;
+ul a{
   text-decoration: none;
-  color:black;
+  color: black;
 }
-.layout>ul>li{
-  float:left
-}
-.layout a{
+.bar>li{
   float:left;
-  text-align: center;
-  padding: 10px;
-  background: #808080;
 }
-.layout a:hover{
+.bar:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.bar{
+  width: 600px;
+  margin: 0px auto;
+  background:#f1f1f1;
+  padding: 0;
+  box-shadow: 3px 3px 3px 3px #888888;
+  border-radius: 3px;
+
+}
+.bar>li>a{
+  display: inline-block;
+  width:60px;
+  height:30px;
+  line-height:30px;
+  text-align: center;
+}
+.bar>li>a:hover{
   background: #ccc;
 }
-.layout li:last-child:hover>div{
-  display:block;
+.bar>.lv1{
+  position: relative;
 }
-.layout .children a{
- width:100px;
- clear: both;
- float:right;
-}
-.children{
+.bar>.lv1>.lv2{
   position: absolute;
-  left:0px;
-  top:100%;
-  display:none;
+  left: 0px;
 }
-.children a:hover{
+.bar>.lv1>.lv2 {
+  background: #f1f1f1;
+  padding:0;
+  display: none;
+  box-shadow: 3px 3px 3px 3px #888888
+}
+.bar>.lv1>.lv2 a{
   display: block;
+  width: 200px;
+  padding:3px 5px;
+  text-align: center;
 }
-</style>
+.bar>.lv1>.lv2 a:hover {
+  background: #ccc;
+}
+.bar>.lv1:hover>.lv2{
+ display:block;
+ }
+  </style>
 </head>
 <body>
-<div class="layout">
     <ul class="bar">
         <li><a href="#">首页</a></li>
         <li><a href="#">作品</a></li>
-        <li>
+        <li class="lv1">
             <a href="#">更多</a>
-          <div class="children">
-                <a href="#">Github</a>
-                <a href="#">博客</a>
-                <a href="#">知乎</a>
-          </div>
-      </li>
-  
+            <ul class="lv2">
+            <li><a href="#">Github</a></li>
+            <li><a href="#">博客</a></li>
+            <li><a href="#">知乎</a></li>
+            </ul>
+        </li>
     </ul>
-</div>
 </html>
